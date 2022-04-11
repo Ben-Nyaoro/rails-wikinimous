@@ -1,0 +1,11 @@
+<div class="container p4 .align-items-center">
+	<h1 class="text-center">One Article titled:</h1>
+
+	<h2><%= @article.title %></h2>
+	<p><%= @article.content * 5 %></p>
+
+  <%= link_to "All articles", articles_path %>
+  <%= link_to "Edit Article", edit_article_path %>
+	<%= link_to "Delete", article_path(@article.id), method: :delete, data: { confirm: "Are you sure you want to delete #{@article.title}?" }%>
+</div>
+

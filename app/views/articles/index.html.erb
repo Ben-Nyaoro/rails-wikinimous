@@ -1,0 +1,15 @@
+<div class="container p4 .align-items-center">
+	<h1 class="text-center">All articles</h1>
+
+
+
+
+
+	<% @articles.each do |article| %>
+		<h2 ><%= article.title %></h2>
+		<p><%= article.content * 5 %></p>
+		<%= link_to article_path(article.id) do %>
+       Read more
+      <% end %>
+	<% end %>
+</div>
